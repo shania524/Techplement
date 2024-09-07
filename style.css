@@ -1,110 +1,81 @@
-*{
-  padding: 0;
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
   margin: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-body{
-  background-color: #212121;
-  color: #fff ;
-  height: 100vh;
+  padding: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
   text-align: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  padding: 32px;
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
   border-radius: 10px;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.quote-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  color: #e8e8e8;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.quote-content .heading {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-#quote{
-  font-weight: 300;
-  position: relative;
-}
-
-#author{
-  font-weight: 400;
-}
-
-#quote,#author {
-  line-height: 1.5;
-  font-style: italic;
-}
-
-.quote-content #quote-generator {
-  color: #e8e8e8;
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(-45deg, #f79a29 0%, #ff0f7b );
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
   width: 100%;
-  height: 5px;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
-  z-index: -1;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.container:hover::before {
-  height: 100%;
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
 }
 
-.container:hover {
-  box-shadow: none;
+#quote-box {
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
 }
 
-.container:hover #quote-generator{
-  color: #212121;
-  background: #e8e8e8;
+#quoteText {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
 }
 
-.quote-content #quote-generator:hover {
-  outline: 2px solid #e8e8e8;
-  background: transparent;
-  color: #e8e8e8;
+#quoteAuthor {
+  font-size: 1.2em;
+  margin-top: 10px;
 }
 
-.quote-content #quote-generator:active {
-  box-shadow: none;
+.button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 1em;
 }
 
-@media screen and  (max-width: 500px){
-  .container{
-    width: 90%;
-  }
+.button:hover {
+  background-color: #ff4500;
+}
+
+.input {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+#searchForm {
+  margin: 20px 0;
+}
+
+#searchResult {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
 }
